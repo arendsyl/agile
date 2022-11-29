@@ -1,9 +1,6 @@
 # Members
 
-Jean-Baptiste Kaiser
-
-Florent Kieffer
-
-Thomas Ravenne
-
-Quentin Guillaume
+Jean-Baptiste Kaiser <br>
+Florent Kieffer <br>
+Thomas Ravenne <br>
+Quentin Guillaume <br>
