@@ -10,7 +10,7 @@
 
     <div>
         <label>Description du tournoi: </label>
-        <input name="Description" #description="ngModel" [(ngModel)]="tournoi.description" placeholder="Saisissez la description du tournoi" required>
+        <input name="Description" #description="ngModel" [(ngModel)]="tournoi.description" placeholder="Saisissez la description du tournoi">
         <div *ngIf="description.errors?.['required'] && (description.dirty || description.touched)">
             Le champs description est requis
         </div>
@@ -18,7 +18,7 @@
 
     <div>
         <label>Date de debut: </label>
-        <input name="dateDebut" #dateDebut="ngModel" [(ngModel)]="tournoi.dateDebut" placeholder="Saisissez la date de debut du tournoi" required>
+        <input name="dateDebut" #dateDebut="ngModel" [(ngModel)]="tournoi.dateDebut" placeholder="Saisissez la date de debut du tournoi">
         <div *ngIf="dateDebut.errors?.['required'] && (dateDebut.dirty || dateDebut.touched)">
             Le champs date de debut est requis
         </div>
@@ -26,7 +26,7 @@
 
     <div>
         <label>Date de fin: </label>
-        <input name="dateFin" #dateFin="ngModel" [(ngModel)]="tournoi.dateFin" placeholder="Saisissez la date de fin du tournoi" required>
+        <input name="dateFin" #dateFin="ngModel" [(ngModel)]="tournoi.dateFin" placeholder="Saisissez la date de fin du tournoi">
         <div *ngIf="dateFin.errors?.['required'] && (dateFin.dirty || dateFin.touched)">
             Le champs date de fin est requis
         </div>
