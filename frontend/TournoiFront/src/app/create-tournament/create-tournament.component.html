@@ -33,32 +33,25 @@
     </div>
 
     <div>
-        <label>Nombre de place minimum: </label>
-        <input name="nombreDePlaceMin" #nPlaceMin="ngModel" [(ngModel)]="tournoi.nombreDePlaceMin" placeholder="Saisissez le nombre le nombre de place minimum" required>
-        <div *ngIf="nPlaceMin.errors?.['required'] && (nPlaceMin.dirty || nPlaceMin.touched)">
-            Le champs nombre de place minimum est requis
-        </div>
-    </div>
-
-    <div>
-        <label>Nombre de place maximum: </label>
-        <input name="nombreDePlaceMax" #nPlaceMax="ngModel" [(ngModel)]="tournoi.nombreDePlaceMax" placeholder="Saisissez le nombre le nombre de place maximum" required>
-        <div *ngIf="nPlaceMax.errors?.['required'] && (nPlaceMax.dirty || nPlaceMax.touched)">
-            Le champs nombre de place maximum est requis
+        <label>Nombre de place: </label>
+        <select name="nombreDePlace" #nPlace="ngModel" [(ngModel)]="tournoi.nombreDePlace" required>
+            <option value=4>4</option>
+            <option value=8>8</option>
+            <option value=16>16</option>
+        </select>
+        <div *ngIf="nPlace.errors?.['required'] && (nPlace.dirty || nPlace.touched)">
+            Le champs nombre de place est requis
         </div>
     </div>
 
     <div>
         <label>Le tournoi est-il gratuit?: </label>
-        <input type="checkbox" name="estGratuit" [(ngModel)]="tournoi.estGratuit" required>
+        <input type="checkbox" name="estGratuit" [(ngModel)]="tournoi.estGratuit">
     </div>
     
     <div>
         <label>Organisateur: </label>
-        <input name="organisateur" #organisateur="ngModel" [(ngModel)]="tournoi.organisateur[0]" placeholder="Saisissez le nom d'un organisateur" required>
-        <div *ngIf="organisateur.errors?.['required'] && (organisateur.dirty || organisateur.touched)">
-            Le champs organisateur est requis
-        </div>
+        <input name="organisateur" #organisateur="ngModel" [(ngModel)]="tournoi.organisateur[0]" placeholder="Saisissez le nom d'un organisateur">
     </div>
     
     <input type="submit" value="Changer Valeur">

@@ -3,8 +3,7 @@ export interface Tournoi {
     description: string,
     dateDebut: string,
     dateFin: string,
-    nombreDePlaceMin: number,
-    nombreDePlaceMax: number,
+    nombreDePlace: number,
     estGratuit: boolean,
     organisateur:string[]
 }

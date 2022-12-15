@@ -11,13 +11,11 @@ export class CreateTournamentComponent {
   tournoi: Tournoi;
 
   constructor() {
-    this.tournoi = {nom:"", description:"", dateDebut:"", dateFin:"",nombreDePlaceMin:0, nombreDePlaceMax:0, estGratuit:false, organisateur:[""]};
+    this.tournoi = {nom:"", description:"", dateDebut:"", dateFin:"",nombreDePlace:0, estGratuit:false, organisateur:[""]};
   }
 
   submitNewTournois() {
-    if(this.tournoi.nombreDePlaceMin > this.tournoi.nombreDePlaceMax) {
 
-    }
   }
 
   ngOnInit(): void {
