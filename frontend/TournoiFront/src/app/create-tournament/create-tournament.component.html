@@ -1,1 +1,66 @@
-<p>create-tournament works!</p>
+<h1>Créer un tournoi:</h1>
+<form (submit)="submitNewTournois()">
+    <div>
+        <label>Nom du tournoi: </label>
+        <input name="Nom" #nom="ngModel" [(ngModel)]="tournoi.nom" placeholder="Saisissez le nom du tournoi" required>
+        <div *ngIf="nom.errors?.['required'] && (nom.dirty || nom.touched)">
+            Le champs nom est requis
+        </div>
+    </div>
+
+    <div>
+        <label>Description du tournoi: </label>
+        <input name="Description" #description="ngModel" [(ngModel)]="tournoi.description" placeholder="Saisissez la description du tournoi" required>
+        <div *ngIf="description.errors?.['required'] && (description.dirty || description.touched)">
+            Le champs description est requis
+        </div>
+    </div>
+
+    <div>
+        <label>Date de debut: </label>
+        <input name="dateDebut" #dateDebut="ngModel" [(ngModel)]="tournoi.dateDebut" placeholder="Saisissez la date de debut du tournoi" required>
+        <div *ngIf="dateDebut.errors?.['required'] && (dateDebut.dirty || dateDebut.touched)">
+            Le champs date de debut est requis
+        </div>
+    </div>
+
+    <div>
+        <label>Date de fin: </label>
+        <input name="dateFin" #dateFin="ngModel" [(ngModel)]="tournoi.dateFin" placeholder="Saisissez la date de fin du tournoi" required>
+        <div *ngIf="dateFin.errors?.['required'] && (dateFin.dirty || dateFin.touched)">
+            Le champs date de fin est requis
+        </div>
+    </div>
+
+    <div>
+        <label>Nombre de place minimum: </label>
+        <input name="nombreDePlaceMin" #nPlaceMin="ngModel" [(ngModel)]="tournoi.nombreDePlaceMin" placeholder="Saisissez le nombre le nombre de place minimum" required>
+        <div *ngIf="nPlaceMin.errors?.['required'] && (nPlaceMin.dirty || nPlaceMin.touched)">
+            Le champs nombre de place minimum est requis
+        </div>
+    </div>
+
+    <div>
+        <label>Nombre de place maximum: </label>
+        <input name="nombreDePlaceMax" #nPlaceMax="ngModel" [(ngModel)]="tournoi.nombreDePlaceMax" placeholder="Saisissez le nombre le nombre de place maximum" required>
+        <div *ngIf="nPlaceMax.errors?.['required'] && (nPlaceMax.dirty || nPlaceMax.touched)">
+            Le champs nombre de place maximum est requis
+        </div>
+    </div>
+
+    <div>
+        <label>Le tournoi est-il gratuit?: </label>
+        <input type="checkbox" name="estGratuit" [(ngModel)]="tournoi.estGratuit" required>
+    </div>
+    
+    <div>
+        <label>Organisateur: </label>
+        <input name="organisateur" #organisateur="ngModel" [(ngModel)]="tournoi.organisateur[0]" placeholder="Saisissez le nom d'un organisateur" required>
+        <div *ngIf="organisateur.errors?.['required'] && (organisateur.dirty || organisateur.touched)">
+            Le champs organisateur est requis
+        </div>
+    </div>
+    
+    <input type="submit" value="Changer Valeur">
+    <input type="reset" value="Annuler">
+</form>
